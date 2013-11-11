@@ -507,7 +507,7 @@ sub proceed_index_gz
 
     if ( $index =~ s/\.gz$// )
     {
-        system("gunzip < $path/$index.gz > $path/$index");
+        system("gunzip < $path$index.gz > $path/$index");
     }
 
     open STREAM, "<$path/$index" or warn("apt-mirror: can't open index in proceed_index_gz");
